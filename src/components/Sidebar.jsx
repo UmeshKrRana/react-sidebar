@@ -46,6 +46,15 @@ export const Sidebar = () => {
 
   return (
     <>
+
+    <div className={`header bg-white py-3 ${menuCollapse ? 'collapsed' : ''}`} style={{height: '60px'}}>
+      <h5 className="text-dark text-center">Header </h5> 
+
+      <div className="closemenu" onClick={menuIconClick}>
+              {menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
+      </div>
+    </div>
+
       <div id="sidebar-main">
         <ProSidebar collapsed={menuCollapse}>
           <SidebarHeader>
@@ -53,9 +62,7 @@ export const Sidebar = () => {
               <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
             </div>
 
-            <div className="closemenu" onClick={menuIconClick}>
-              {menuCollapse ? <FiArrowRightCircle /> : <FiArrowLeftCircle />}
-            </div>
+           
           </SidebarHeader>
 
           <SidebarContent>

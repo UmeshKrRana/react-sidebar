@@ -1,22 +1,47 @@
 #sidebar-main {
+  top: 0;
   position: absolute;
   width: 260px;
 }
+
 #sidebar-main .pro-sidebar {
   height: 100vh;
 }
-#sidebar-main .closemenu {
+
+.header.collapsed .closemenu {
   color: #000;
   position: absolute;
   right: 0;
   z-index: 9999;
   line-height: 20px;
-  border-radius: 50%;
   font-weight: bold;
   font-size: 22px;
-  top: 55px;
+  top: 17px;
+  left: 85px;
+  width: 50px;
   cursor: pointer;
 }
+
+.pro-sidebar-header {
+  height: 60px !important;
+  padding: 6px 0px !important;
+}
+
+.header .closemenu {
+  color: #000;
+  position: absolute;
+  right: 0;
+  z-index: 9999;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 22px;
+  top: 17px;
+  left: 270px;
+  width: 50px;
+  cursor: pointer;
+}
+
+
 #sidebar-main .pro-sidebar {
   width: 100%;
   min-width: 100%;
@@ -40,6 +65,20 @@
   color: #000;
   font-weight: bold;
 }
+.header {
+  border: 1px solid;
+  height: 60px;
+  width: calc(100% - 260px);
+  margin-left: 260px;
+}
+
+.header.collapsed {
+  border: 1px solid;
+  height: 60px;
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
 #sidebar-main .pro-sidebar-inner .pro-sidebar-layout ul {
   padding: 0 5px;
 }
